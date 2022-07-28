@@ -37,6 +37,16 @@ public class Typecasting {
 				System.out.println("int value to double:" + d1);
 				System.out.println("double value to long:" + r);
 					
+					int a=9;
+					long e=a;
+					double t=e;
+					System.out.println("Implicit typecasting");
+					System.out.println();
+					System.out.println("Int value:"+a);
+					System.out.println("Int value to float:"+e);
+					System.out.println("float value to double:"+t);
+					
+					
 				
 			}
 
