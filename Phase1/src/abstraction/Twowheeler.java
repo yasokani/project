@@ -56,6 +56,7 @@ package abstraction;
 	public class Twowheeler extends parent {
 
 		Twowheeler(){
+			super(3,"Hello");
 			System.out.println("Child Default constructor");
 		}
 		int speed=4;
