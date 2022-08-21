@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+          "-//Hibernate/Hibernate Configuration DTD 5.3//EN"  
+          "http://hibernate.sourceforge.net/hibernate-configuration-5.3.dtd">  
+  
+<hibernate-configuration>  
+  
+    <session-factory>  
+        <property name="hbm2ddl.auto">update</property>  
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>  
+        <property name="connection.url">jdbc:mysql://localhost:3306/db_world</property>  
+        <property name="connection.username">root</property>  
+        <property name="connection.password">root</property>  
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>  
+        
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.show_sql">true</property>
+        
+    
+    
+    <mapping resource="product_practice.hbm.xml"/>  
+    
+    
+    
+    <mapping resource="student.hbm.xml"/>
+    <mapping resource="employee.hbm.xml"/>  
+     
+    <!-- mapping resource="tableperheirar.hbm.xml"/-->   
+    <!-- mapping resource="tableperconcrete.hbm.xml"/-->  
+    <mapping resource="tablepersubclass.hbm.xml"/>
+    
+    
+    <!-- One to One mapping files -->
+    <mapping resource="adressmapping.hbm.xml"/>
+    <mapping resource="empmapping.hbm.xml"/>
+    
+    <mapping resource="onetomany.hbm.xml"/> 
+    
+    <mapping resource="questionbag.hbm.xml"/> 
+    <mapping resource="questionmap.hbm.xml"/> 
+    
+    <mapping resource="componentmapp.hbm.xml"/> 
+    
+    <!-- HQL example files-->
+     <mapping class="com.javatpoint.mypackage.HQLEmployee"/>
+     <mapping class="com.javatpoint.mypackage.HQLAddress"/>
+    <!-- end HQL -->
+    
+    <!-- Procedure example files-->
+     <mapping class="com.javatpoint.mypackage.Employee_Procedure"/>
+    <!-- end Procedure -->
+    
+     <mapping class="com.javatpoint.mypackage.StudentAnnotation"/>
+     
+    <!-- Many to Many Annotation / Lazy Loading --> 
+      <mapping class="com.javatpoint.mypackage.Categories"/>
+      <mapping class="com.javatpoint.mypackage.Items"/>
+    <!-- end -->
+    
+    <!-- mapping class="com.javatpoint.mypackage.StudentHQL" /-->
+    
+    
+    </session-factory>  
+  
+</hibernate-configuration>  

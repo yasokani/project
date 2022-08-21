@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 5.3//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-5.3.dtd">  
+  
+ <hibernate-mapping>  
+  <class name="com.javatpoint.mypackage.Product_practice" table="product">  
+    <id name="Id">  
+     <generator class="assigned"></generator>  
+    </id>  
+            
+    <property name="name"></property>  
+    <property name="price"></property>             
+  </class>       
+ </hibernate-mapping>
