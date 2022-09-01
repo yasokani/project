@@ -1,0 +1,5 @@
+com\JPA\PracticeProject3FeedbackApplication.class
+com\JPA\FeedbackService.class
+com\JPA\FeedbackEntity.class
+com\JPA\FeedbackRepository.class
+com\JPA\FeedbackController.class
