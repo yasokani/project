@@ -1,0 +1,40 @@
+<app-home></app-home>
+<div class="jumbotron" style="margin: 45px;">
+  <div class="row">
+  <div class="col-md-5 offset-md-3">
+  <h2 style=" color:rgb(124, 5, 5);text-align: center;font-family: 'Times New Roman';"><u>Add New Employee</u></h2><br>
+  <form [formGroup]="addForm" novalidate class="form" style="margin: auto; padding-top: 5px; padding-bottom: 10px;width: 400px;">  
+    <div class="form-group">  
+      <label for="empId"><b>Employee Id</b></label>  
+      <input type="number" formControlName="id" placeholder="Employee Id" name="empId" class="form-control" id="empId">  
+    </div><br>
+  
+    <div class="form-group">  
+      <label for="FirstName"><b>First Name</b></label>  
+      <input formControlName="first_name" placeholder="Employee's First Name" name="first_name" class="form-control" id="first_name">  
+      <div class="alert alert-danger" *ngIf="addForm.get('first_name')!.hasError('required') && addForm.get('first_name')!.touched">  
+        Employee's First Name is required  
+      </div>  
+    </div><br> 
+
+    <div class="form-group">  
+      <label for="LastName"><b>Last Name</b></label>  
+      <input formControlName="last_name" placeholder="Employee's Last Name" name="last_name" class="form-control" id="last_name">  
+      <div class="alert alert-danger" *ngIf="addForm.get('last_name')!.hasError('required') && addForm.get('last_name')!.touched">  
+        Employee's Last Name is required  
+      </div>  
+    </div><br>  
+
+    <div class="form-group">  
+      <label for="empEmail"><b>Email ID</b></label>  
+      <input formControlName="email" placeholder="Employee Email ID" name="email" class="form-control" id="email">  
+      <div class="alert alert-danger" *ngIf="addForm.get('email')!.hasError('required') && addForm.get('email')!.touched">  
+        Employee Email ID is required  
+      </div>  
+    </div><br>  
+    
+    <div class="text-center">
+    <button class="btn btn-success" [disabled]='addForm.invalid' *ngIf="btnvisibility" (click)="onSubmit()">Add</button>  
+    </div>
+  </form>  
+</div>  

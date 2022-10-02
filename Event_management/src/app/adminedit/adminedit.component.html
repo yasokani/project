@@ -1,0 +1,25 @@
+<app-home></app-home>
+<div class="jumbotron" style="margin: 45px;">
+  <div class="row">
+    <div class="col-md-5 offset-md-3">
+      <h2 style=" color:rgb(124, 5, 5);text-align: center;font-family: 'Times New Roman';"><u>Change Admin Details</u></h2>  
+      <form [formGroup]="editForm" novalidate class="form" style="margin: auto; padding-top: 18px; padding-bottom: 10px;width: 400px;">  
+        <div class="form-group">  
+          <label for="email"><b>Email ID</b></label>  
+          <input formControlName="email" placeholder="Email" name="email" class="form-control" id="email">  
+          <div class="alert alert-danger" *ngIf="editForm.get('email')!.hasError('required')">Email is required</div>  
+        </div><br>
+    
+        <div class="form-group">  
+          <label for="password"><b>Password</b></label>  
+          <input formControlName="password" placeholder="Password" name="password" class="form-control" id="password">  
+          <div class="alert alert-danger" *ngIf="editForm.get('password')!.hasError('required')">Password is required</div>  
+        </div><br>
+        
+        <div class="form-group text-center">
+          <button class="btn btn-success" [disabled]='editForm.invalid' (click)="onUpdate()">Save Changes</button> 
+        </div> 
+  </form>  
+  </div>
+  </div>
+</div>  

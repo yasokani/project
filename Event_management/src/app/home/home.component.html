@@ -1,0 +1,29 @@
+<html>
+<head>
+  <script>
+    $( '#topheader .navbar-nav a' ).on( 'click', function () {
+    $( '#topheader .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
+    $( this ).parent( 'li' ).addClass( 'active' );
+    });
+  </script>
+</head>
+
+<body id="topheader" style="font-family: inherit">
+<nav class="navbar navbar-light navbar-expand-sm">
+<ul  class="navbar-nav" routerLinkActive="active">
+  <li class="nav-item">
+    <a class="nav-link " routerLink="/dash"><img class="ima" src="https://www.freepnglogos.com/uploads/logo-home-png/chimney-home-icon-transparent-1.png" alt="image">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/list-emp">Employees</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/admin">Settings</a>
+  </li>
+  <li class="nav-item" id="app">
+    <a class="nav-link" href="#" (click)="logout()">Logout</a>
+  </li>
+</ul>
+</nav>
+</body>
+</html>

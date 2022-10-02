@@ -1,0 +1,24 @@
+  #topheader .navbar-nav li > a {
+    color: black;
+  }
+
+  #topheader .navbar-nav li > a:hover, #topheader .navbar-nav li > a:focus {
+    background-color: rgb(133, 131, 131);
+    color: #fff;
+  }
+  
+  #topheader .navbar-nav li.active > a {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .ima{
+    height: 20px;
+    width: 20px;
+    padding-bottom: 5px;
+}
+
+nav{
+    height: 40px;
+    background-color: rgba(224, 223, 223, 0.863);
+}

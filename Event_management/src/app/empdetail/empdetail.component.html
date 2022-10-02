@@ -1,0 +1,34 @@
+<app-home></app-home>
+<br>
+<br>
+<div>
+    <table class="table"  *ngIf="employeess" style="padding-top: 10px;" >
+      <thead style="background-color: rgb(136, 85, 132);color: white;">
+        <td colspan="2">Details of<B style="font-style: italic;">{{employeess.first_name}}</B></td>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>Id</b></td>
+          <td>{{employeess.id}}</td>
+        </tr>
+        <tr>
+          <td><b>First Name</b></td>
+          <td>{{employeess.first_name}}</td>
+        </tr>
+        <tr>
+          <td><b>Last Name</b></td>
+          <td>{{employeess.last_name}}</td>
+        </tr>
+        <tr>
+          <td><b>Email ID</b></td>
+          <td>{{employeess.email}}</td>
+        </tr>
+      <tr id="but"><td colspan="2">
+        <button style="margin-left: 10px;" class="btn btn-primary" routerLink="/list-emp">Employee List</button>     
+        <button style="margin-left: 20px;" class="btn btn-danger" (click)="deleteEmp(employeess)" routerLink="/list-emp">Delete</button>  
+        <button style="margin-left: 20px;" class="btn btn-secondary" (click)="editEmp(employeess)">Update</button>        
+      </td></tr>
+      </tbody>      
+    </table>
+  </div>
+   

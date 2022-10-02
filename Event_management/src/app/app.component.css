@@ -1,0 +1,9 @@
+.header{
+    text-align:center;
+    margin:auto;
+    font-family:  Georgia, 'Times New Roman', Times, serif; 
+    background-color:rgb(43, 41, 43);
+    padding-top: 15px;
+    height: 80px;
+    color: white;
+}
